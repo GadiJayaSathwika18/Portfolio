@@ -5,6 +5,7 @@ import {contactInfo, isHireable} from "../../portfolio";
 import emoji from "react-easy-emoji";
 import {Fade} from "react-reveal";
 
+
 export default function GithubProfileCard({prof}) {
   if (isHireable) {
     prof.hireable = "Yes";
@@ -20,7 +21,7 @@ export default function GithubProfileCard({prof}) {
             <div className="blog-header">
               <p className="subTitle blog-subtitle">{contactInfo.subtitle}</p>
             </div>
-            <h2 className="bio-text">"{emoji(String(prof.bio))}"</h2>
+            <h2 className="bio-text">{emoji("Welcome! I’m Jaya Sathwika, a developer and data enthusiast. Explore my portfolio featuring projects in Full Stack, Machine Learning, and Data Science.")}</h2>
             {prof.location !== null && (
               <div className="location-div">
                 <span className="desc-prof">
@@ -49,12 +50,9 @@ export default function GithubProfileCard({prof}) {
             <SocialMedia />
           </div>
           <div className="image-content-profile">
-            <img
-              src={prof.avatarUrl}
-              alt={prof.name}
-              className="profile-image"
-            />
+            <img src="my-photo.jpeg" alt="Jaya Sathwika" className="profile-image" />
           </div>
+
         </div>
       </div>
     </Fade>
